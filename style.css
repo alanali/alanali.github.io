@@ -43,16 +43,16 @@ body {
 
 #bunni {
   font-weight: bold;
-  margin-top: 4vw;
-  font-size: 5.5vw;
+  margin-top: clamp(3px, 3vw, 20px);
+  font-size: clamp(20px, 5.5vw, 70px);
   letter-spacing: 0.3vw;
-  line-height: 2vw;
+  line-height: clamp(2px, 2vw);
 }
 
 #store {
   letter-spacing: 2vw;
-  font-size: 3vw;
+  font-size: clamp(15px, calc(5.5vw - 30px), 70px);
   margin-left: 1vw;
   margin-right: -1vw;
-  line-height: 6vw;
+  line-height: clamp(5px, 5.5vw, 7px);
 }
