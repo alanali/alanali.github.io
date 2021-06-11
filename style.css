@@ -1,26 +1,31 @@
 @font-face {
-  font-family: chalkboard-font;
-  src: url(path/fonts/chalkboard-font.otf);
-  font-style: Regular;
+  font-family: chalkboard;
+  src: url("path/fonts/chalkboard.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: chalkboard;
+  src: url("path/fonts/chalkboardbold.ttf" format("truetype"));
+  font-weight: bold;
 }
 
 body {
-  background-color: #FFFFD1;
+  font-family: 'chalkboard';
+  background-color: #FFFFE0;
   position: relative;
 }
 
-h1 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  text-align: center;
-  margin: 0;
+#blue-rect {
+  width: 100vw;
+  height: 100vh;
+  background: #CDF3E3;
 }
 
-h2 {
-  width: 20%;
-  margin: 5px 0;
-  text-align: justify;
-  text-justify: inter-word;
+div {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-size: 3.5vw;
+  color: #FFFFE0;
+  line-height: 6px;
 }
