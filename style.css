@@ -22,7 +22,7 @@ body {
   background-color: var(--dblue);
   position: relative;
   margin: 0;
-  margin-top: 1.2vw;
+  margin-top: clamp(2px, 1vw, 10px);
 }
 
 .round-rect {
@@ -43,18 +43,18 @@ body {
 
 #bunni {
   font-weight: bold;
-  margin-top: clamp(3px, 3vw, 5px);
+  margin-top: clamp(1px, 3vw, 2px);
   font-size: clamp(20px, 5.5vw, 70px);
   letter-spacing: 0.3vw;
   margin-left: clamp(2.5px, 0.3vw, 15px);
   margin-right: clamp(-2.5px, -0.3vw, -15px);
-  line-height: clamp(3px, 2vw);
+  line-height: clamp(2px, -2vw);
 }
 
 #store {
   font-size: clamp(15px, calc(5.5vw - 30px), 30px);
-  letter-spacing: 2vw;
+  letter-spacing: clamp(2px, 2vw, 30px);
   margin-left: clamp(2.5px, 2vw, 30px);
   margin-right: clamp(-2.5px, -1vw, -30px);
-  line-height: clamp(3px, 5.5vw, 6px);
+  line-height: clamp(2px, -5.5vw, 3px);
 }
