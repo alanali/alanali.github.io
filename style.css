@@ -39,14 +39,14 @@ body {
   position: absolute;
   text-align: center;
   color: var(--dgreen);
-  line-height: 4vw;
 }
 
 #bunni {
   font-weight: bold;
   margin-top: 4vw;
-  font-size: 6vw;
+  font-size: 5.5vw;
   letter-spacing: 0.3vw;
+  line-height: 2vw;
 }
 
 #store {
@@ -54,4 +54,5 @@ body {
   font-size: 3vw;
   margin-left: 1vw;
   margin-right: -1vw;
+  line-height: 6vw;
 }
