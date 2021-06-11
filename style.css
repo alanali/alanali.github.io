@@ -1,6 +1,7 @@
-@@font-face {
+@font-face {
   font-family: chalkboard-font;
   src: url(path/fonts/chalkboard-font.otf);
+  font-style: Regular;
 }
 
 body {
@@ -10,8 +11,16 @@ body {
 
 h1 {
   position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
   margin: 0;
+}
+
+h2 {
+  width: 20%;
+  margin: 5px 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
