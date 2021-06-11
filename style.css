@@ -1,3 +1,17 @@
+@@font-face {
+  font-family: chalkboard-font;
+  src: url(path/fonts/chalkboard-font.otf);
+}
+
 body {
   background-color: #FFFFD1;
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  margin: 0;
 }
