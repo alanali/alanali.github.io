@@ -40,7 +40,7 @@ body {
   width: 100%;
   height: clamp(40px, 10vw, 130px);
   text-align: center;
-  z-index: 300;
+  z-index: 100;
   position: fixed;
   color: var(--dgreen);
 }
@@ -51,6 +51,23 @@ body {
   border-radius: 5vw 5vw 0 0;
   background: white;
   transition: 0.5s;
+}
+
+.clouds {
+  transform: translateX(10%);
+  position: absolute;
+  width: 85%;
+  height: clamp(40px, 7vw, 100px);
+  top: clamp(10px, 1.1vw, 100px);
+  bottom: 3vw;
+  text-align: center;
+  transition: 0.8s;
+}
+
+.cloud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #bunni {

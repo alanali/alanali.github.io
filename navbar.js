@@ -7,8 +7,8 @@ function shrink(id) {
   if (id == "bunni") {
     if (3.5 * width / 100 <= 30) {
       size = "30px";
-    } else if (3.5 * width / 100 >= 70) {
-      size = "20px";
+    } else if (3.5 * width / 100 >= 50) {
+      size = "40px";
     } else {
       size = "3.5vw";
     }
