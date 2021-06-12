@@ -56,7 +56,7 @@ body {
 #bunni {
   font-weight: bold;
   margin-top: clamp(1px, 3vw, 2px);
-  font-size: clamp(20px, 5.5vw, 70px);
+  font-size: clamp(30px, 5.5vw, 70px);
   letter-spacing: 0.3vw;
   margin-left: clamp(2.5px, 0.3vw, 15px);
   margin-right: clamp(-2.5px, -0.3vw, -15px);

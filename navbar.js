@@ -1,42 +1,52 @@
-window.onresize = function() {resizeFunction()};
 window.onscroll = function() {scrollFunction()};
+var width = window.innerWidth;
 
-function boo(){
-  window.alert("boo!")
-}
-
-function checkFont(id) {
+function shrink(id) {
   var size;
   if (id == "bunni") {
-    if ("5.5vw" < "20px") {
-      size = "20px";
-    } else if ("5.5vw" > "70px") {
-      size = "70px-2vw";
+    if (3.5 * width / 100 < 20) {
+      size = 20;
     } else {
       size = "3.5vw";
     }
   }
   else if (id == "store") {
-    if ("5.5vw-30px" < "15px") {
-      size = "15px";
-    } else if ("5.5vw-30px" > "30px") {
-      size = "30px-2vw";
+    if (((3.5 * 100 / width) - 30) < 15) {
+      size = 15;
     } else {
-      size = "3.5vw-30px";
+      size = (3.5 * width / 100) - 30;
+    }
+  }
+  return size;
+}
+
+function grow(id) {
+  var size;
+  if (id == "bunni") {
+    if (5.5 * width / 100 < 20) {
+      size = "20px+2vw";
+    } else {
+      size = "5.5vw";
+    }
+  }
+  else if (id == "store") {
+    if (((5.5 * width / 100) - 30) < 15) {
+      size = (2 * width / 100) + 15;
+    } else {
+      size = (5.5 * width / 100) - 30;
     }
   }
   return size;
 }
 
 function scrollFunction() {
-  var bsize = document.getElementById("bunni").style.fontSize;
-  var ssize = document.getElementById("store").style.fontSize;
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("bunni").style.fontSize = checkFont("bunni");
-    document.getElementById("store").style.fontSize = checkFont("store");
+    // window.alert(document.getElementById("bunni").style.fontSize);
+    document.getElementById("bunni").style.fontSize = shrink("bunni");
+    document.getElementById("store").style.fontSize = shrink("store");
   } else {
-    document.getElementById("bunni").style.fontSize = bsize;
-    document.getElementById("store").style.fontSize = ssize;
+    document.getElementById("bunni").style.fontSize = grow("bunni");
+    document.getElementById("store").style.fontSize = grow("store");
     // if ("0.7em" > "30px") {
     //   document.getElementById("store").style.letterSpacing = "30px";
     // } else if ("0.7em" < "0px") {
