@@ -46,7 +46,6 @@ body {
 
 #backing {
   width: 100%;
-  margin: 0;
   height: clamp(40px, 10vw, 130px);
   border-radius: 5vw 5vw 0 0;
   background: white;
