@@ -1,19 +1,25 @@
 window.onscroll = function() {scrollFunction()};
+
 var width = window.innerWidth;
 
 function shrink(id) {
   var size;
   if (id == "bunni") {
-    if (3.5 * width / 100 < 30) {
+    if (3.5 * width / 100 <= 30) {
       size = "30px";
+    } else if (3.5 * width / 100 >= 70) {
+      size = "20px";
     } else {
       size = "3.5vw";
     }
   }
   else if (id == "store") {
-    if ((3.5 * width / 100) - 30 < 15) {
+    if ((3.5 * width / 100) - 30 <= 15) {
       size = "15px";
-    } else {
+    } else if ((3.5 * width / 100) - 30 >= 30) {
+      size = "27px";
+    }
+    else {
       size = ((3.5 * width / 100) - 30) + "px";
     }
   }
@@ -23,18 +29,18 @@ function shrink(id) {
 function grow(id) {
   var size;
   if (id == "bunni") {
-    if (5.5 * width / 100 < 30) {
+    if (5.5 * width / 100 <= 30) {
       size = "30px";
-    } else if (5.5 * width / 100 > 70) {
+    } else if (5.5 * width / 100 >= 70) {
       size = "70px";
     } else {
       size = "5.5vw";
     }
   }
   else if (id == "store") {
-    if ((5.5 * width / 100) - 30 < 15) {
+    if ((5.5 * width / 100) - 30 <= 15) {
       size = "15px";
-    } else if (5.5 * width / 100 > 30) {
+    } else if (5.5 * width / 100 >= 30) {
       size = "30px";
     } else {
       size = (5.5 * width / 100) - 30 + "px";
