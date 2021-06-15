@@ -2,6 +2,10 @@ window.onscroll = function() {scrollFunction()};
 
 var width = window.innerWidth;
 
+function boo(x) {
+  window.alert("hi");
+}
+
 function shrink(id) {
   var size;
   if (id == "bunni") {
