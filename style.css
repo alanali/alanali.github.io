@@ -48,7 +48,7 @@ body {
 #backing {
   width: 100%;
   position: relative;
-  height: clamp(40px, 10vw, 130px);
+  height: clamp(50px, 10vw, 130px);
   border-radius: 4vw 4vw 0 0;
   background: white;
   transition: 0.1s;
@@ -59,13 +59,13 @@ body {
   width: 85%;
   top: clamp(10px, 1.1vw, 100px);
   bottom: 3vw;
-  transition: 0.8s;
+  transition: 0.5s;
   left: 7.5%;
 }
 
 .cloud {
   position: relative;
-  height: clamp(40px, 7vw, 100px);
+  height: clamp(50px, 7vw, 100px);
   align-items: center;
   display: flex;
   justify-content: center;
@@ -80,8 +80,8 @@ body {
 }
 
 #bunni {
+  margin-top: -5px;
   font-weight: bold;
-  margin-top: clamp(1px, 3vw, 2px);
   font-size: clamp(30px, 5.5vw, 70px);
   letter-spacing: 0.3vw;
   margin-left: clamp(2.5px, 0.3vw, 15px);
@@ -108,7 +108,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  top: clamp(60px, 10vw, 130px);
+  top: clamp(80px, 10vw, 130px);
   text-align: center;
 }
 

@@ -1,8 +1,8 @@
 var titleh;
 var width = window.innerWidth;
 window.onload = function() {
-  titleh = Math.max(document.getElementById("backing").offsetHeight|| 0);
-  titleh = titleh + "px";
+  titleh = document.getElementById("backing").clientHeight;
+  titleh += "px"
 };
 
 window.onscroll = function() {
@@ -25,8 +25,8 @@ function shrink(id) {
     }
   }
   else if (id == "store") {
-    if (((3.5 * width / 100) - 30) < 15) {
-      size = "15px";
+    if (((3.5 * width / 100) - 30) < 10) {
+      size = ((3.5 * width / 95) - 15) + "px";
     } else if (((3.5 * width / 100) - 30) >= 30) {
       size = "25px";
     }
@@ -61,12 +61,11 @@ function grow(id) {
 }
 
 function scrollFunction() {
-
   if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-    document.getElementById("backing").style.height = document.getElementById("title").offsetHeight + (width / 100) + "px";
+    document.getElementById("backing").style.top = "-10px";
+    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 100) + "px";
     document.getElementById("bunni").style.fontSize = shrink("bunni");
     document.getElementById("store").style.fontSize = shrink("store");
-    document.getElementById("backing").style.top = "-15px";
   } else {
     document.getElementById("backing").style.height = titleh;
     document.getElementById("bunni").style.fontSize = grow("bunni");
