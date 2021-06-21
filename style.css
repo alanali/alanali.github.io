@@ -51,6 +51,7 @@ body {
   height: clamp(40px, 10vw, 130px);
   border-radius: 4vw 4vw 0 0;
   background: white;
+  transition: 0.1s;
 }
 
 .clouds {
