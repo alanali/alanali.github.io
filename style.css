@@ -13,7 +13,7 @@ html,
 :root {
   --yellow: #FFFAC5;
   --lblue: #D5EDEF;
-  --dblue: #A1DADE;
+  --dblue: #98D9E3;
   --lgreen: #B1D29C;
   --dgreen: #8CC0A0;
 }
@@ -25,7 +25,7 @@ body {
   height: 200vh;
 }
 
-#white-rect {
+#back-rect {
   position: relative;
   top: clamp(2px, 1vw, 10px);
   width: 100%;
@@ -63,7 +63,7 @@ body {
   left: 7.5%;
 }
 
-.cloud {
+#cloud {
   position: relative;
   height: clamp(50px, 7vw, 100px);
   align-items: center;
@@ -74,12 +74,13 @@ body {
 
 .wcloud {
   position: absolute;
-  width: 100%
-  line-height: clamp(2px, 1em, 25px);
-  font-size: clamp(10px, 1.5vw, 20px)
+  color: var(--dblue);
+  width: 100%;
+  line-height: clamp(5px, 1em, 25px);
+  font-size: clamp(10px, 1.5vw, 20px);
 }
 
-#bunni {
+#first {
   margin-top: -5px;
   font-weight: bold;
   font-size: clamp(30px, 5.5vw, 70px);
@@ -89,7 +90,7 @@ body {
   transition: 0.4s;
 }
 
-#store {
+#last {
   font-size: clamp(15px, calc(5.5vw - 30px), 30px);
   letter-spacing: clamp(0px, 0.7em, 30px);
   margin-left: clamp(2.5px, 0.7em, 30px);
@@ -122,15 +123,42 @@ body {
   background: var(--lgreen);
 }
 
-.content {
+.dgreen-rect {
   position: relative;
   margin: auto;
   top: 1%;
-  width: 94%;
+  width: 95%;
   height: 98%;
   flex-basis: 0;
   flex-shrink: 1;
   flex-grow: 1;
   border-radius: 1.5vw;
   background: var(--dgreen);
+}
+
+#heading {
+  padding: 5px;
+  font-size: clamp(15px, calc(5vw - 30px), 30px);
+  color: var(--yellow);
+  transition: 1s;
+}
+
+#white-rect {
+  position: relative;
+  text-align: left;
+  margin: auto;
+  padding: 5px;
+  border-radius: 1.5vw;
+  background: white;
+}
+
+.content {
+  font-size: clamp(12px, calc(5vw - 30px), 22px);
+  line-height: clamp(13px, calc(5vw - 30px), 25px);
+  padding: 5px 8px 8px 10px;
+  transition: 1s;
+}
+
+p3 {
+  color: var(--dblue);
 }
