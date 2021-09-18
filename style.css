@@ -19,10 +19,13 @@ html,
 }
 
 body {
-  font-family: 'chalkboard';
   background-color: var(--dblue);
   margin: 0;
   height: 200vh;
+}
+
+body *{
+  font-family: 'chalkboard';
 }
 
 #back-rect {
@@ -126,9 +129,9 @@ body {
 .dgreen-rect {
   position: relative;
   margin: auto;
-  top: 1%;
+  margin-top: 1.5vw;
   width: 95%;
-  height: 98%;
+  padding-bottom: 0.5vw;
   flex-basis: 0;
   flex-shrink: 1;
   flex-grow: 1;
@@ -136,14 +139,11 @@ body {
   background: var(--dgreen);
 }
 
-#heading {
+.heading {
   padding: 5px;
-  font-size: clamp(15px, calc(5vw - 30px), 30px);
-  color: var(--yellow);
-  transition: 1s;
 }
 
-#white-rect {
+.white-rect {
   position: relative;
   text-align: left;
   margin: auto;
@@ -153,32 +153,67 @@ body {
 }
 
 .content {
-  font-size: clamp(12px, calc(5vw - 30px), 22px);
+  font-size: clamp(13px, calc(5vw - 30px), 22px);
   line-height: clamp(13px, calc(5vw - 30px), 25px);
   padding: 5px 8px 8px 10px;
   transition: 1s;
 }
 
+p1 {
+  font-size: clamp(15px, calc(5vw - 30px), 30px);
+  color: var(--yellow);
+  transition: 1s;
+}
+
+p2 {
+  font-weight: bold;
+  color: var(--dblue)
+}
+
 p3 {
-  color: var(--dblue);
-  font-family: chalkboard;
+  color: var(--dgreen);
   src: url("path/fonts/chalkboard.ttf") format("truetype");
   font-size: clamp(12px, calc(5vw - 30px), 22px);
   line-height: clamp(13px, calc(5vw - 30px), 25px);
+  padding-left: clamp(1px, 0.5vw, 5px);
 }
 
 .hover {
   border: none;
   background: none;
-  padding: none;
+  padding: 0;
+  outline: 0;
+  width: 100%;
+  text-align: left;
+}
+
+@keyframes rainbow {
+  from {
+    color: #A8E6CF;
+  } 5% {
+    color: #A8E6CF;
+  } 20% {
+     color: #DCEDC1;
+  } 40% {
+    color: #FFD3B6;
+  } 60% {
+    color:  #FFAAA5;
+  } 80% {
+    color: #FF8B94;
+  } 100% {
+    color: #A8E6CF;
+  }
 }
 
 button .onhover {
   display: none;
 }
-button:hover .inital {
+button:hover .initial {
   display: none;
 }
 button:hover .onhover {
   display: inline;
+}
+button:hover .normal {
+  animation: rainbow 5s linear 0s infinite;
 }
