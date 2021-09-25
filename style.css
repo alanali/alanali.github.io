@@ -12,7 +12,7 @@ html,
 
 :root {
   --yellow: #FFFAC5;
-  --lblue: #D5EDEF;
+  --lblue: #B5DFE3;
   --dblue: #98D9E3;
   --lgreen: #B1D29C;
   --dgreen: #8CC0A0;
@@ -37,7 +37,8 @@ body *{
   background: white;
 }
 
-/* Menu Bar */
+
+/*------------------------- HEADER -------------------------*/
 
 .navbar {
   width: 100%;
@@ -103,7 +104,7 @@ body *{
 }
 
 
-/* Body */
+/*------------------------- BODY -------------------------*/
 
 .main {
   position: relative;
@@ -125,6 +126,9 @@ body *{
   border-radius: 1.5vw;
   background: var(--lgreen);
 }
+
+
+/*------------------------- P1: ABOUT ME -------------------------*/
 
 .dgreen-rect {
   position: relative;
@@ -153,34 +157,33 @@ body *{
 }
 
 .content {
-  font-size: clamp(13px, calc(5vw - 30px), 22px);
-  line-height: clamp(13px, calc(5vw - 30px), 25px);
+  line-height: clamp(13px, calc(5vw - 30px), 22px);
   padding: 5px 8px 8px 10px;
   transition: 1s;
 }
 
 p1 {
-  font-size: clamp(15px, calc(5vw - 30px), 30px);
+  font-size: clamp(16px, calc(5vw - 30px), 32px);
   color: var(--yellow);
   transition: 1s;
 }
 
 p2 {
-  font-weight: bold;
+  font-size: clamp(16px, calc(5vw - 35px), 20px);
   color: var(--dblue)
 }
 
 p3 {
   color: var(--dgreen);
   src: url("path/fonts/chalkboard.ttf") format("truetype");
-  font-size: clamp(12px, calc(5vw - 30px), 22px);
-  line-height: clamp(13px, calc(5vw - 30px), 25px);
+  font-size: clamp(12px, calc(5vw - 30px), 18px);
   padding-left: clamp(1px, 0.5vw, 5px);
 }
 
 .hover {
   border: none;
   background: none;
+  line-height: clamp(13px, calc(5vw - 30px), 22px);
   padding: 0;
   outline: 0;
   width: 100%;
@@ -216,4 +219,33 @@ button:hover .onhover {
 }
 button:hover .normal {
   animation: rainbow 5s linear 0s infinite;
+}
+
+
+/*------------------------- P2: EXPERIENCE -------------------------*/
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  background: url('Clover.png') no-repeat left;
+  background-size: clamp(10px, 1vw, 20px);
+}
+
+.bullet1 {
+  background-position: left center;
+  padding-left: 17px;
+}
+
+.bullet2 {
+  background-position: 20px center;
+  padding-left: 37px;
+}
+
+.bullet3 {
+  background-position: 40px center;
+  padding-left: 60px;
 }
