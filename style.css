@@ -16,6 +16,7 @@ html,
   --dblue: #98D9E3;
   --lgreen: #B1D29C;
   --dgreen: #8CC0A0;
+  --red: #FF8680;
 }
 
 body {
@@ -149,7 +150,6 @@ body *{
 
 .white-rect {
   position: relative;
-  text-align: left;
   margin: auto;
   padding: 5px;
   border-radius: 1.5vw;
@@ -157,7 +157,8 @@ body *{
 }
 
 .content {
-  line-height: clamp(13px, calc(5vw - 30px), 22px);
+  line-height: clamp(13px, calc(5vw - 30px), 25px);
+  text-align: left;
   padding: 5px 8px 8px 10px;
   transition: 1s;
 }
@@ -178,6 +179,13 @@ p3 {
   src: url("path/fonts/chalkboard.ttf") format("truetype");
   font-size: clamp(12px, calc(5vw - 30px), 18px);
   padding-left: clamp(1px, 0.5vw, 5px);
+}
+
+p10 {
+  font-size: clamp(16px, calc(5vw - 35px), 20px);
+  color: var(--red);
+  display: block;
+  text-align: center;
 }
 
 .hover {
