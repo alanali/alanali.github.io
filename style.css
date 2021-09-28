@@ -19,21 +19,32 @@ html,
   --red: #FF8680;
 }
 
+a:link {
+  color: var(--dblue)
+}
+a:hover {
+  color: var(--lblue)
+}
+a:visited {
+  color: var(--lgreen)
+}
+a:active {
+  color: var(--dgreen)
+}
+
 body {
   background-color: var(--dblue);
   margin: 0;
-  height: 200vh;
 }
-
 body *{
   font-family: 'chalkboard';
 }
 
 #back-rect {
   position: relative;
-  top: clamp(2px, 1vw, 10px);
-  width: 100%;
+  margin-top: clamp(2px, 1vw, 10px);
   height: 100%;
+  width: 100%;
   border-radius: 4vw 4vw 0 0;
   background: white;
 }
@@ -111,7 +122,6 @@ body *{
   position: relative;
   width: 60%;
   margin: auto;
-  height: 100%;
   display: flex;
   flex-direction: column;
   top: clamp(80px, 10vw, 130px);
@@ -119,9 +129,9 @@ body *{
 }
 
 .lgreen-rect {
-  margin: auto;
   width: 100%;
-  flex-basis: 0;
+  padding-top: 1.5vw;
+  flex-basis: auto;
   flex-shrink: 1;
   flex-grow: 1;
   border-radius: 1.5vw;
@@ -134,7 +144,7 @@ body *{
 .dgreen-rect {
   position: relative;
   margin: auto;
-  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
   width: 95%;
   padding-bottom: 0.5vw;
   flex-basis: 0;
