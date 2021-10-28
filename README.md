@@ -1,4 +1,3 @@
 # alanali.github.io
-Bunni Store
-
+Personal Website
 URL: https://alanali.github.io/
