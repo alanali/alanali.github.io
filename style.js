@@ -2,8 +2,10 @@
 var titleh;
 var width = window.innerWidth;
 window.onload = function() {
-  titleh = document.getElementById("backing").clientHeight;
-  titleh += "px"
+  titleh = document.getElementById("backing").height;
+  titleh += "px";
+  ltext = document.getElementById("lwcloud").innerHTML;
+  rtext = document.getElementById("rwcloud").innerHTML;
 };
 
 window.onscroll = function() {
@@ -62,13 +64,30 @@ function grow(id) {
 }
 
 function scrollFunction() {
-  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+  // On scroll
+  if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
     document.getElementById("backing").style.top = "-10px";
-    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 100) + "px";
+    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 150) + "px";
     document.getElementById("title").style.fontSize = shrink("title");
     document.getElementById("subtitle").style.fontSize = shrink("subtitle");
-    document.getElementById("cloud").height = "30px";
-  } else {
+    // Change images
+    document.getElementById("lc").src = "home page/lcloudpoof.gif";
+    document.getElementById("rc").src = "home page/rcloudpoof.gif";
+    document.getElementById("lwcloud").innerHTML = "";
+    document.getElementById("rwcloud").innerHTML = "";
+    setTimeout(() => {
+      document.getElementById("lc").style.visibility = 'hidden';
+      document.getElementById("rc").style.visibility = 'hidden';
+    }, 1000);
+// Original position
+} else {
+    // Add clouds back
+    // document.getElementById("lc").src = "home page/lcloud.png";
+    // document.getElementById("rc").src = "home page/rcloud.png";
+    // document.getElementById("lc").style.visibility = 'visible';
+    // document.getElementById("rc").style.visibility = 'visible';
+    // document.getElementById("lwcloud").innerHTML = ltext;
+    // document.getElementById("rwcloud").innerHTML = rtext;
     document.getElementById("backing").style.height = titleh;
     document.getElementById("title").style.fontSize = grow("title");
     document.getElementById("subtitle").style.fontSize = grow("subtitle");

@@ -88,7 +88,7 @@ body *{
   transition: 0.3s;
 }
 
-#wcloud {
+#lwcloud, #rwcloud {
   position: absolute;
   color: var(--dblue);
   width: 100%;
