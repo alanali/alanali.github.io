@@ -55,15 +55,18 @@ body *{
 /*------------------------- HEADER -------------------------*/
 
 .navbar {
+  box-sizing: border-box;
   width: 100%;
   height: clamp(40px, 10vw, 130px);
   text-align: center;
   z-index: 100;
   position: fixed;
   color: var(--dgreen);
+  align-items: center;
 }
 
 #backing {
+  box-sizing: border-box;
   width: 100%;
   position: relative;
   height: clamp(50px, 10vw, 80px);
@@ -99,7 +102,7 @@ body *{
 }
 
 #title {
-  margin-top: -5px;
+  margin-top: 0px;
   font-weight: bold;
   font-size: clamp(30px, 5.5vw, 70px);
   letter-spacing: 0.3vw;
@@ -183,7 +186,7 @@ p1 {
 }
 
 p2 {
-  font-size: clamp(16px, calc(5vw - 35px), 20px);
+  font-size: clamp(16px, calc(5vw - 32px), 20px);
   color: var(--dblue)
 }
 
@@ -197,6 +200,12 @@ p3 {
 p4 {
   color: var(--lblue);
   font-size: clamp(12px, calc(5vw - 30px), 18px);
+}
+
+p5 {
+  font-size: clamp(12px, calc(5vw - 30px), 20px);
+  color: var(--lblue);
+  padding-left: clamp(1px, 0.5vw, 5px);
 }
 
 p10 {
