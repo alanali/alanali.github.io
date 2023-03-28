@@ -113,9 +113,10 @@ body {
 
 /*------------------------- BODY -------------------------*/
 
-@media (max-width: 979px) {
-    .no-margin-mobile {
+@media (max-width: 500px) {
+    .main {
         width: 90% !important;
+        top: 60px !important;
     }
 }
 
@@ -125,8 +126,9 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  top: clamp(80px, 10vw, 130px);
+  top: clamp(60px, 10vw, 130px);
   text-align: center;
+  transition: 0.5s;
 }
 
 .lgreen-rect {
