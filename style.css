@@ -22,6 +22,7 @@ a:active {
   color: var(--dgreen)
 }
 
+
 body {
   background-color: var(--dblue);
   margin: 0;
@@ -111,6 +112,12 @@ body {
 
 
 /*------------------------- BODY -------------------------*/
+
+@media (max-width: 979px) {
+    .no-margin-mobile {
+        width: 90% !important;
+    }
+}
 
 .main {
   position: relative;
