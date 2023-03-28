@@ -1,16 +1,4 @@
 html,
-@font-face {
-  font-family: chalkboard;
-  src: url("path/fonts/chalkboard.ttf") format("truetype");
-  font-style: normal;
-  font-weight:normal;
-}
-
-/* @font-face {
-  font-family: chalkboard;
-  src: url("path/fonts/chalkboardbold.ttf" format("truetype"));
-  font-weight: bold;
-} */
 
 :root {
   --yellow: #FFFAC5;
@@ -38,9 +26,7 @@ body {
   background-color: var(--dblue);
   margin: 0;
   padding-bottom: 150px;
-}
-body *{
-  font-family: 'chalkboard';
+  font-family: 'Nunito';
 }
 
 #back-rect {
@@ -182,19 +168,18 @@ body *{
 }
 
 p1 {
-  font-size: clamp(16px, calc(5vw - 30px), 32px);
+  font-size: clamp(16px, calc(5vw - 30px), 35px);
   color: var(--yellow);
   transition: 1s;
 }
 
 p2 {
-  font-size: clamp(16px, calc(5vw - 32px), 20px);
+  font-size: clamp(16px, calc(5vw - 25px), 22px);
   color: var(--dblue)
 }
 
 p3 {
   color: var(--dgreen);
-  src: url("path/fonts/chalkboard.ttf") format("truetype");
   font-size: clamp(12px, calc(5vw - 30px), 18px);
   padding-left: clamp(1px, 0.5vw, 5px);
 }
@@ -225,6 +210,7 @@ p10 {
   outline: 0;
   width: 100%;
   text-align: left;
+  font-family: 'Nunito';
 }
 
 @keyframes rainbow {
