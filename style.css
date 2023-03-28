@@ -2,13 +2,15 @@ html,
 @font-face {
   font-family: chalkboard;
   src: url("path/fonts/chalkboard.ttf") format("truetype");
+  font-style: normal;
+  font-weight:normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: chalkboard;
   src: url("path/fonts/chalkboardbold.ttf" format("truetype"));
   font-weight: bold;
-}
+} */
 
 :root {
   --yellow: #FFFAC5;
