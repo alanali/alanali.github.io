@@ -183,7 +183,6 @@ p2 {
 p3 {
   color: var(--dgreen);
   font-size: clamp(12px, calc(5vw - 30px), 18px);
-  padding-left: clamp(5px, 2vw, 30px);
 }
 
 p4 {
@@ -202,6 +201,10 @@ p10 {
   color: var(--red);
   display: block;
   text-align: center;
+}
+
+.tabtext {
+  padding-left: clamp(5px, 2vw, 30px);
 }
 
 .hover {
@@ -256,18 +259,19 @@ ul {
 }
 
 li {
+  list-style: none;
   background: url('Clover.png') no-repeat left;
-  background-size: clamp(10px, 1vw, 20px);
+  background-size: clamp(10px, 1.2vw, 20px);
 }
 
 .bullet1 {
   background-position: left center;
-  padding-left: 17px;
+  padding-left: 20px;
 }
 
 .bullet2 {
   background-position: 20px center;
-  padding-left: 37px;
+  padding-left: 40px;
 }
 
 .bullet3 {
