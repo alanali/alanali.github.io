@@ -12,10 +12,6 @@ window.onscroll = function() {
   scrollFunction();
 };
 
-function boo(x) {
-  window.alert(x);
-}
-
 function shrink(id) {
   var size;
   if (id == "title") {
@@ -70,6 +66,13 @@ function scrollFunction() {
     document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 150) + "px";
     document.getElementById("title").style.fontSize = shrink("title");
     document.getElementById("subtitle").style.fontSize = shrink("subtitle");
+    // Change colors
+    document.getElementById("backing").style.background = "#98D9E3";
+    document.getElementById("title").style.color = "white";
+    document.getElementById("backing").style.borderTopLeftRadius = "0px";
+    document.getElementById("backing").style.borderTopRightRadius = "0px";
+    document.getElementById("backing").style.borderBottomLeftRadius = "2vw";
+    document.getElementById("backing").style.borderBottomRightRadius = "2vw";
     // Change images
     document.getElementById("lc").src = "home page/lcloudpoof.gif";
     document.getElementById("rc").src = "home page/rcloudpoof.gif";
@@ -81,16 +84,11 @@ function scrollFunction() {
     }, 1000);
 // Original position
 } else {
-    // Add clouds back
-    // document.getElementById("lc").src = "home page/lcloud.png";
-    // document.getElementById("rc").src = "home page/rcloud.png";
-    // document.getElementById("lc").style.visibility = 'visible';
-    // document.getElementById("rc").style.visibility = 'visible';
-    // document.getElementById("lwcloud").innerHTML = ltext;
-    // document.getElementById("rwcloud").innerHTML = rtext;
     document.getElementById("backing").style.height = titleh;
     document.getElementById("title").style.fontSize = grow("title");
     document.getElementById("subtitle").style.fontSize = grow("subtitle");
     document.getElementById("backing").style.top = "0px";
+    document.getElementById("backing").style.background = "white";
+    document.getElementById("title").style.color = "#8CC0A0";
   }
 }
