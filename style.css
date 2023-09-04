@@ -270,22 +270,22 @@ ul {
 li {
   list-style: none;
   background: url('HomePage/Clover.png') no-repeat left;
-  background-size: clamp(10px, 1.2vw, 20px);
+  background-size: clamp(10px, 1vw, 20px);
 }
 
 .bullet1 {
   background-position: left center;
-  padding-left: 20px;
+  padding-left: clamp(30px, 1vw + 20px, 40px);
 }
 
 .bullet2 {
   background-position: 20px center;
-  padding-left: 40px;
+  padding-left: clamp(50px, 1vw + 40px, 60px);
 }
 
 .bullet3 {
   background-position: 40px center;
-  padding-left: 60px;
+  padding-left: clamp(70px, 1vw + 60px, 80px);
 }
 
 

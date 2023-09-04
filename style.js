@@ -63,7 +63,7 @@ function scrollFunction() {
   // On scroll
   if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
     document.getElementById("backing").style.top = "-10px";
-    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 150) + "px";
+    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 175) + "px";
     document.getElementById("title").style.fontSize = shrink("title");
     document.getElementById("subtitle").style.fontSize = shrink("subtitle");
     // Change backing colors and corners
