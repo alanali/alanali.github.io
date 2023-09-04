@@ -166,7 +166,7 @@ body {
 .white-rect {
   position: relative;
   margin: auto;
-  padding: 5px;
+  padding: 10px;
   border-radius: 1.5vw;
   background: white;
 }
@@ -274,17 +274,17 @@ li {
 }
 
 .bullet1 {
-  background-position: left center;
+  background-position: 5px center;
   padding-left: clamp(30px, 1vw + 20px, 40px);
 }
 
 .bullet2 {
-  background-position: 20px center;
+  background-position: 25px center;
   padding-left: clamp(55px, 1vw + 45px, 65px);
 }
 
 .bullet3 {
-  background-position: 40px center;
+  background-position: 45px center;
   padding-left: clamp(75px, 1vw + 65px, 85px);
 }
 
