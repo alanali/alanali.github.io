@@ -63,7 +63,7 @@ function scrollFunction() {
   // On scroll
   if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
     document.getElementById("backing").style.top = "-10px";
-    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 175) + "px";
+    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 200) + "px";
     document.getElementById("title").style.fontSize = shrink("title");
     document.getElementById("subtitle").style.fontSize = shrink("subtitle");
     // Change backing colors and corners
@@ -74,8 +74,8 @@ function scrollFunction() {
     document.getElementById("backing").style.borderBottomLeftRadius = "2vw";
     document.getElementById("backing").style.borderBottomRightRadius = "2vw";
     // Change images
-    document.getElementById("lc").src = "home page/lcloudpoof.gif";
-    document.getElementById("rc").src = "home page/rcloudpoof.gif";
+    document.getElementById("lc").src = "HomePage/lcloudpoof.gif";
+    document.getElementById("rc").src = "HomePage/rcloudpoof.gif";
     document.getElementById("lwcloud").innerHTML = "";
     document.getElementById("rwcloud").innerHTML = "";
     setTimeout(() => {

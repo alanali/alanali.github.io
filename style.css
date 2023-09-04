@@ -280,12 +280,12 @@ li {
 
 .bullet2 {
   background-position: 20px center;
-  padding-left: clamp(50px, 1vw + 40px, 60px);
+  padding-left: clamp(55px, 1vw + 45px, 65px);
 }
 
 .bullet3 {
   background-position: 40px center;
-  padding-left: clamp(70px, 1vw + 60px, 80px);
+  padding-left: clamp(75px, 1vw + 65px, 85px);
 }
 
 
