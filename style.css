@@ -26,7 +26,6 @@ a:active {
 body {
   background-color: var(--dblue);
   margin: 0;
-  padding-bottom: 150px;
   font-family: 'Nunito';
 }
 
@@ -37,7 +36,6 @@ body {
   width: 100%;
   border-radius: 4vw 4vw 4vw 4vw;
   background: white;
-  padding-bottom: 200px;
 }
 
 
@@ -303,3 +301,19 @@ li {
 
 
 /*------------------------- P4: HOBBIES -------------------------*/
+
+
+/*--------------------------- FOOTER ----------------------------*/
+
+.footer {
+  padding-top: 100px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
