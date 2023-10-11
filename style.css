@@ -42,6 +42,19 @@ body {
 
 
 /*------------------------- HEADER -------------------------*/
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+.fly-up {
+  animation: flyUp 0.5s forwards;
+}
+
 
 .navbar {
   box-sizing: border-box;

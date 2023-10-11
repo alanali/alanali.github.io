@@ -60,40 +60,38 @@ function grow(id) {
 }
 
 function scrollFunction() {
-  // On scroll
+  const cloudsContainer = document.querySelector(".clouds");
+  const backing = document.getElementById("backing");
+  const title = document.getElementById("title");
+  const subtitle = document.getElementById("subtitle");
+
   if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
-    document.getElementById("backing").style.top = "-10px";
-    document.getElementById("backing").style.height = document.getElementById("title").clientHeight + (width / 300) + "px";
-    document.getElementById("title").style.fontSize = shrink("title");
-    document.getElementById("subtitle").style.fontSize = shrink("subtitle");
-    // Change backing colors and corners
-    document.getElementById("backing").style.background = "#98D9E3";
-    document.getElementById("title").style.color = "white";
-    document.getElementById("backing").style.borderTopLeftRadius = "0px";
-    document.getElementById("backing").style.borderTopRightRadius = "0px";
-    document.getElementById("backing").style.borderBottomLeftRadius = "2vw";
-    document.getElementById("backing").style.borderBottomRightRadius = "2vw";
-    // Change images
-    document.getElementById("lc").src = "HomePage/lcloudpoof.gif";
-    document.getElementById("rc").src = "HomePage/rcloudpoof.gif";
-    document.getElementById("lwcloud").innerHTML = "";
-    document.getElementById("rwcloud").innerHTML = "";
-    setTimeout(() => {
-      document.getElementById("lc").style.visibility = 'hidden';
-      document.getElementById("rc").style.visibility = 'hidden';
-    }, 1000);
-// Original position
-} else {
-    document.getElementById("backing").style.height = titleh;
-    document.getElementById("title").style.fontSize = grow("title");
-    document.getElementById("subtitle").style.fontSize = grow("subtitle");
-    document.getElementById("backing").style.top = "0px";
-    document.getElementById("backing").style.background = "white";
-    document.getElementById("title").style.color = "#8CC0A0";
-    // Change backing colors and corners
-    document.getElementById("backing").style.borderTopLeftRadius = "2vw";
-    document.getElementById("backing").style.borderTopRightRadius = "2vw";
-    document.getElementById("backing").style.borderBottomLeftRadius = "0px";
-    document.getElementById("backing").style.borderBottomRightRadius = "0px";
+    cloudsContainer.classList.add("fly-up");
+    updateStyles(backing, title, subtitle, true);
+  } else {
+    updateStyles(backing, title, subtitle, false);
   }
+}
+
+function updateStyles(backing, title, subtitle, isScrolled) {
+  backing.style.height = isScrolled
+    ? title.clientHeight + (width / 300) + "px"
+    : titleh;
+
+  title.style.fontSize = isScrolled ? shrink("title") : grow("title");
+  subtitle.style.fontSize = isScrolled ? shrink("subtitle") : grow("subtitle");
+
+  backing.style.top = isScrolled ? "-10px" : "0px";
+  backing.style.background = isScrolled ? "#98D9E3" : "white";
+  title.style.color = isScrolled ? "white" : "#8CC0A0";
+
+  const topLeftRadius = isScrolled ? "0px" : "2vw";
+  const topRightRadius = isScrolled ? "0px" : "2vw";
+  const bottomLeftRadius = isScrolled ? "2vw" : "0px";
+  const bottomRightRadius = isScrolled ? "2vw" : "0px";
+
+  backing.style.borderTopLeftRadius = topLeftRadius;
+  backing.style.borderTopRightRadius = topRightRadius;
+  backing.style.borderBottomLeftRadius = bottomLeftRadius;
+  backing.style.borderBottomRightRadius = bottomRightRadius;
 }
