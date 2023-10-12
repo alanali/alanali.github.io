@@ -61,7 +61,7 @@ function grow(id) {
 
 function scrollFunction() {
   const cloudsContainer = document.querySelector(".clouds");
-  const backing = document.getElementById("backing");
+  const backing = document.querySelector(".navbar");
   const title = document.getElementById("title");
   const subtitle = document.getElementById("subtitle");
 
