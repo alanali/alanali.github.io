@@ -82,16 +82,6 @@ function updateStyles(backing, title, subtitle, isScrolled) {
   subtitle.style.fontSize = isScrolled ? shrink("subtitle") : grow("subtitle");
 
   backing.style.top = isScrolled ? "-10px" : "0px";
-  backing.style.background = isScrolled ? "#98D9E3" : "white";
+  backing.style.background = isScrolled ? "#98D9E3" : "transparent";
   title.style.color = isScrolled ? "white" : "#8CC0A0";
-
-  const topLeftRadius = isScrolled ? "0px" : "2vw";
-  const topRightRadius = isScrolled ? "0px" : "2vw";
-  const bottomLeftRadius = isScrolled ? "2vw" : "0px";
-  const bottomRightRadius = isScrolled ? "2vw" : "0px";
-
-  backing.style.borderTopLeftRadius = topLeftRadius;
-  backing.style.borderTopRightRadius = topRightRadius;
-  backing.style.borderBottomLeftRadius = bottomLeftRadius;
-  backing.style.borderBottomRightRadius = bottomRightRadius;
 }

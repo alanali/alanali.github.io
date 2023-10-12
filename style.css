@@ -5,6 +5,7 @@ html,
   --lblue: #B5DFE3;
   --dblue: #98D9E3;
   --lgreen: #B1D29C;
+  --green: #9FC99E;
   --dgreen: #8CC0A0;
   --red: #FF8680;
 }
@@ -45,12 +46,12 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-200%);
+    transform: translateY(-200px);
   }
 }
 
 .fly-up {
-  animation: flyUp 0.5s forwards;
+  animation: flyUp 1s forwards;
 }
 
 
@@ -70,9 +71,9 @@ body {
   width: 100%;
   position: relative;
   height: clamp(50px, 10vw, 80px);
-  border-radius: 4vw 4vw 0 0;
-  background: white;
+  border-radius: 0 0 2vw 2vw ;
   transition: 0.1s;
+  background-color: transparent;
 }
 
 .clouds {
@@ -85,7 +86,6 @@ body {
 }
 
 #cloud {
-  /* position: relative; */
   height: clamp(50px, 7vw, 100px);
   align-items: center;
   display: flex;
@@ -160,8 +160,8 @@ body {
   margin: auto;
   margin-bottom: 1.5vw;
   width: 95%;
-  padding-bottom: clamp(0px, 0.5vw, 30px);
-  padding-top: clamp(0px, 0.5vw, 30px);
+  padding-bottom: clamp(0px, 0.5vw, 10px);
+  padding-top: clamp(0px, 0.5vw, 10px);
 
   flex-basis: 0;
   flex-shrink: 1;
