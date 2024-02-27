@@ -6,21 +6,21 @@ html,
   --green: #9FC99E;
   --dgreen: #8CC0A0;
   --red: #FF8680;
-  --lblue: #B5DFE3;
+  --lblue: #d0f5f8;
   --dblue: #98D9E3;
 }
 
 a:link {
-  color: var(--dblue)
+  color: var(--dblue);
 }
 a:hover {
-  color: var(--lblue)
+  color: var(--lblue);
 }
 a:visited {
-  color: var(--lgreen)
+  color: var(--lgreen);
 }
 a:active {
-  color: var(--dgreen)
+  color: var(--dgreen);
 }
 
 
@@ -35,7 +35,7 @@ body {
   margin-top: clamp(5px, 1vw, 12px);
   height: 100%;
   width: 100%;
-  border-radius: 3vw 3vw 3vw 3vw;
+  border-radius: 2.5vw 2.5vw 2.5vw 2.5vw;
   background: white;
 }
 
@@ -54,18 +54,88 @@ body {
   animation: flyUp 1s forwards;
 }
 
+.github-button,
+.github-button *,
+.github-button :after,
+.github-button :before,
+.github-button:after,
+.github-button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.github-button:disabled {
+  cursor: default;
+}
+.github-button:-moz-focusring {
+  outline: auto;
+}
+.github-button svg {
+  vertical-align: middle;
+}
+.github-button [hidden] {
+  display: none;
+}
+.github-button {
+    background: var(--lblue);
+    background-clip: content-box;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    height: 100px;
+    -webkit-mask-image: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transition: 0.2s;
+    width: 100px;
+    transform: scale(0.6);
+    cursor: pointer;
+    z-index: 2;
+  }
+.github-button:hover {
+  background: var(--lgreen);
+}
+.github-button svg {
+  --size: 70px;
+  fill: var(--dblue);
+  display: block;
+  height: var(--size);
+  left: calc(50% - var(--size) / 2);
+  position: absolute;
+  top: calc(50% - var(--size) / 2);
+  width: var(--size);
+}
+.github-button:hover svg {
+  fill: var(--yellow);
+}
+.github-button:before {
+  border: 5px solid var(--lgreen);
+  border-radius: 50%;
+  content: "";
+  inset: 1px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(2);
+  transition: 0.2s;
+}
+.github-button:hover:before {
+  opacity: 1;
+  transform: scale(1);
+}
 
 .navbar {
   box-sizing: border-box;
   width: 100%;
   height: clamp(20px, 10vw, 130px);
   text-align: center;
-  z-index: 100;
   position: fixed;
   color: var(--dgreen);
   border-radius: 0 0 clamp(20px, 2vw, 50px) clamp(20px, 2vw, 50px);
   transition: 0.1s;
   background-color: transparent;
+  z-index: 1;
 }
 
 .clouds {
