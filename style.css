@@ -228,10 +228,6 @@ body {
   background: var(--dgreen);
 }
 
-.heading {
-  padding: 5px;
-}
-
 .white-rect {
   position: relative;
   margin: auto;
@@ -255,17 +251,19 @@ p1 {
 
 p2 {
   font-size: clamp(16px, calc(5vw - 25px), 22px);
+  font-weight: bold;
   color: var(--dgreen)
 }
 
 p3 {
-  color: var(--green);
+  color: var(--dgreen);
   font-size: clamp(12px, calc(5vw - 30px), 18px);
 }
 
 p4 {
   color: var(--lgreen);
   font-size: clamp(12px, calc(5vw - 30px), 18px);
+  font-style: italic;
 }
 
 p5 {
@@ -314,6 +312,10 @@ p10 {
   }
 }
 
+.heading {
+  padding: 5px;
+}
+
 button .onhover {
   display: none;
 }
@@ -338,23 +340,23 @@ ul {
 
 li {
   list-style: none;
-  background: url('HomePage/Clover.png') no-repeat left;
-  background-size: clamp(10px, 1vw, 20px);
+  background: url('HomePage/cloud.png') no-repeat left;
+  background-size: clamp(30px, 1vw, 45px);
 }
 
 .bullet1 {
   background-position: 5px center;
-  padding-left: clamp(30px, 1vw + 20px, 40px);
+  padding-left: calc(clamp(30px, 1.5vw, 45px) + 5px);
 }
 
 .bullet2 {
-  background-position: 25px center;
-  padding-left: clamp(55px, 1vw + 45px, 65px);
+  background-position: 40px center;
+  padding-left: calc(clamp(30px, 1.5vw, 45px) + 40px);
 }
 
 .bullet3 {
-  background-position: 45px center;
-  padding-left: clamp(75px, 1vw + 65px, 85px);
+  background-position: 65px center;
+  padding-left: calc(clamp(30px, 1.5vw, 45px) + 65px);
 }
 
 
