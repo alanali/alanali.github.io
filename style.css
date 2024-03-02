@@ -273,7 +273,7 @@ p5 {
   padding-left: clamp(1px, 1vw, 20px);
 }
 
-p10 {
+p6 {
   font-size: clamp(16px, calc(5vw - 35px), 20px);
   color: var(--red);
   display: block;
@@ -341,7 +341,7 @@ ul {
 
 li {
   list-style: none;
-  background: url('https://github.com/alanali/alanali.github.io/blob/main/HomePage/cloud.png') no-repeat left;
+  background: url('HomePage/cloud.png') no-repeat left;
   background-size: clamp(30px, 1vw, 45px);
 }
 
