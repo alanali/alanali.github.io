@@ -74,15 +74,18 @@ body {
   border-radius: 50%;
   display: block;
   height: 100px;
+  width: 100px;
   -webkit-mask-image: none;
   padding: 0;
   position: absolute;
-  top: 0;
-  left: 5px;
-  width: 100px;
   transform: scale(0.6);
   cursor: pointer;
   z-index: 2;
+}
+@media (max-width: 800px) {
+  .github-button {
+    transform: scale(0.5);
+  }
 }
 .github-button:hover {
   background: var(--lgreen);
@@ -162,6 +165,12 @@ body {
   justify-content: center;
   position: relative; /* Ensure positioning context */
   transition: 0.3s;
+}
+
+@media (max-width: 800px) {
+  #cloud {
+    display: none;
+  }
 }
 
 .wcloud {
@@ -336,22 +345,22 @@ ul {
 li {
   list-style: none;
   background: url('HomePage/cloud.png') no-repeat left;
-  background-size: clamp(20px, 1vw, 45px);
+  background-size: clamp(15px, 1.5vw, 45px);
 }
 
 .bullet1 {
   background-position: 5px center;
-  padding-left: calc(clamp(20px, 1.5vw, 45px) + 5px);
+  padding-left: calc(clamp(20px, 1.6vw, 45px) + 5px);
 }
 
 .bullet2 {
   background-position: 40px center;
-  padding-left: calc(clamp(20px, 1.5vw, 45px) + 40px);
+  padding-left: calc(clamp(20px, 1.6vw, 45px) + 40px);
 }
 
 .bullet3 {
   background-position: 75px center;
-  padding-left: calc(clamp(20px, 1.5vw, 45px) + 75px);
+  padding-left: calc(clamp(20px, 1.6vw, 45px) + 75px);
 }
 
 
