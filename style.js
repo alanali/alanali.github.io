@@ -1,87 +1,66 @@
-// -------------------- NAVBAR -------------------- //
-var titleh;
+// -------------------- TITLE -------------------- //
+let title, clouds, header, headerHeight, headerTop, titleFont;
 var width = window.innerWidth;
-window.onload = function() {
-  titleh = document.getElementById("backing").height;
-  titleh += "px";
-  ltext = document.getElementById("lwcloud").innerHTML;
-  rtext = document.getElementById("rwcloud").innerHTML;
-};
+document.addEventListener("DOMContentLoaded", function() {
+  title = document.getElementById('title');
+  clouds = document.querySelector(".clouds");
+  header = document.querySelector(".header");
+  // subtitle = document.getElementById("subtitle");
+  headerHeight = header.offsetHeight + "px";
+  headerTop = parseFloat(window.getComputedStyle(header).top) + "px";
+  titleFont = parseFloat(window.getComputedStyle(title).fontSize) + "px";
+});
 
 window.onscroll = function() {
-  scrollFunction();
+  if (document.documentElement.scrollTop > 30) {
+    clouds.classList.add("fly-up");
+    updateStyles(true);
+  } else {
+    updateStyles(false);
+  }
 };
 
 function shrink(id) {
   var size;
   if (id == "title") {
     if (3.5 * width / 100 <= 30) {
-      size = "25px";
+      size = "30px";
     } else if (3.5 * width / 100 >= 50) {
       size = "40px";
     } else {
       size = "3.5vw";
     }
   }
-  else if (id == "subtitle") {
-    if (((3.5 * width / 100) - 30) < 10) {
-      size = ((3.5 * width / 95) - 15) + "px";
-    } else if (((3.5 * width / 100) - 30) >= 30) {
-      size = "25px";
-    }
-    else {
-      size = ((3.5 * width / 100) - 30) + "px";
-    }
-  }
+  // else if (id == "subtitle") {
+  //   if (((3.5 * width / 100) - 30) < 10) {
+  //     size = ((3.5 * width / 95) - 15) + "px";
+  //   } else if (((3.5 * width / 100) - 30) >= 30) {
+  //     size = "25px";
+  //   }
+  //   else {
+  //     size = ((3.5 * width / 100) - 30) + "px";
+  //   }
+  // }
   return size;
 }
 
 function grow(id) {
   var size;
   if (id == "title") {
-    if (5.5 * width / 100 <= 30) {
-      size = "30px";
-    } else if (5.5 * width / 100 >= 70) {
-      size = "70px";
-    } else {
-      size = "5.5vw";
-    }
+    size = titleFont;
   }
-  else if (id == "subtitle") {
-    if ((5.5 * width / 100) - 30 <= 15) {
-      size = "15px";
-    } else if ((5.5 * width / 100) - 30 > 30) {
-      size = "30px";
-    } else {
-      size = (5.5 * width / 100) - 30 + "px";
-    }
-  }
+  // else if (id == "subtitle") {
+  //   size = subtitle;
+  // }
   return size;
 }
 
-function scrollFunction() {
-  const cloudsContainer = document.querySelector(".clouds");
-  const backing = document.querySelector(".navbar");
-  const title = document.getElementById("title");
-  const subtitle = document.getElementById("subtitle");
-
-  if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
-    cloudsContainer.classList.add("fly-up");
-    updateStyles(backing, title, subtitle, true);
-  } else {
-    updateStyles(backing, title, subtitle, false);
-  }
-}
-
-function updateStyles(backing, title, subtitle, isScrolled) {
-  backing.style.height = isScrolled
-    ? title.clientHeight + (width / 300) + "px"
-    : titleh;
-
+function updateStyles(isScrolled) {
+  header.style.height = (isScrolled ? title.clientHeight + (width / 300) : parseFloat(headerHeight)) + "px";
+  header.style.top = isScrolled ? "-10px" : headerTop;
+  header.style.background = isScrolled ? "#98D9E3" : "transparent";
   title.style.fontSize = isScrolled ? shrink("title") : grow("title");
-  subtitle.style.fontSize = isScrolled ? shrink("subtitle") : grow("subtitle");
-
-  backing.style.top = isScrolled ? "-10px" : "0px";
-  backing.style.background = isScrolled ? "#98D9E3" : "transparent";
+  title.style.padding = isScrolled ? "8px" : "5px";
   title.style.color = isScrolled ? "white" : "#8CC0A0";
+  // subtitle.style.fontSize = isScrolled ? shrink("subtitle") : grow("subtitle");
 }

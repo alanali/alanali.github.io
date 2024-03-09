@@ -32,7 +32,7 @@ body {
 
 #back-rect {
   position: relative;
-  margin-top: clamp(5px, 1vw, 12px);
+  margin-top: 10px;
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -55,15 +55,6 @@ body {
   animation: flyUp 1s forwards;
 }
 
-.github-button,
-.github-button *,
-.github-button :after,
-.github-button :before,
-.github-button:after,
-.github-button:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
 .github-button:disabled {
   cursor: default;
 }
@@ -77,23 +68,23 @@ body {
   display: none;
 }
 .github-button {
-    background: var(--lblue);
-    background-clip: content-box;
-    border-radius: 50%;
-    box-sizing: border-box;
-    display: block;
-    height: 100px;
-    -webkit-mask-image: none;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    transition: 0.2s;
-    width: 100px;
-    transform: scale(0.6);
-    cursor: pointer;
-    z-index: 2;
-  }
+  border: 0 solid;
+  box-sizing: border-box;
+  background: var(--lblue);
+  background-clip: content-box;
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  -webkit-mask-image: none;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 100px;
+  transform: scale(0.6);
+  cursor: pointer;
+  z-index: 2;
+}
 .github-button:hover {
   background: var(--lgreen);
 }
@@ -126,11 +117,13 @@ body {
   transform: scale(1);
 }
 
-.navbar {
+.header {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   box-sizing: border-box;
   width: 100%;
   height: clamp(20px, 10vw, 130px);
-  text-align: center;
   position: fixed;
   color: var(--dgreen);
   border-radius: 0 0 clamp(20px, 2vw, 50px) clamp(20px, 2vw, 50px);
@@ -152,23 +145,26 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
+  position: relative; /* Ensure positioning context */
   transition: 0.3s;
 }
 
-#lwcloud, #rwcloud {
+.wcloud {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--dblue);
   width: 100%;
   line-height: clamp(5px, 1em, 25px);
   font-size: clamp(10px, 1.5vw, 20px);
+  text-align: center;
 }
 
 #title {
-  padding-top: clamp(5px, 0.5vw, 50px);
   font-weight: bold;
-  font-size: clamp(30px, 5.5vw, 70px);
-  margin-top: clamp(5px, 0.3vw, 15px);
-  margin-bottom: clamp(5px, 0.3vw, 15px);
+  font-size: clamp(35px, 5.5vw, 70px);
+  padding: 5px;
   transition: 0.4s;
 }
 
@@ -177,17 +173,17 @@ body {
   letter-spacing: clamp(0px, 0.1em, 30px);
   line-height: clamp(2px, -5.5vw, 3px);
   transition: 0.3s;
-  color: var(--dgreen)
+  color: var(--dgreen);
+  display: none;
 }
 
 
 /*------------------------- BODY -------------------------*/
 
 @media only screen and (max-width: 800px) {
-    .main {
-        width: 90% !important;
-        top: 60px !important;
-    }
+  .main {
+    width: 90% !important;
+  }
 }
 
 .main {
