@@ -23,6 +23,7 @@ a:active {
   color: var(--dgreen);
 }
 
+
 body {
   background-image: linear-gradient(var(--dblue), var(--dgreen));
   margin: 0;
@@ -31,7 +32,7 @@ body {
 
 #back-rect {
   position: relative;
-  top: 10px;
+  margin-top: clamp(5px, 1vw, 12px);
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -54,6 +55,15 @@ body {
   animation: flyUp 1s forwards;
 }
 
+.github-button,
+.github-button *,
+.github-button :after,
+.github-button :before,
+.github-button:after,
+.github-button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
 .github-button:disabled {
   cursor: default;
 }
@@ -67,17 +77,19 @@ body {
   display: none;
 }
 .github-button {
-  border: 0 solid;
-  box-sizing: border-box;
   background: var(--lblue);
   background-clip: content-box;
   border-radius: 50%;
+  box-sizing: border-box;
   display: block;
   height: 100px;
-  width: 100px;
   -webkit-mask-image: none;
   padding: 0;
   position: absolute;
+  top: 0;
+  left: 0px;
+  transition: 0.2s;
+  width: 100px;
   transform: scale(0.6);
   cursor: pointer;
   z-index: 2;
@@ -85,6 +97,8 @@ body {
 @media (max-width: 800px) {
   .github-button {
     transform: scale(0.5);
+    top: -18px;
+    left: -18px;
   }
 }
 .github-button:hover {
@@ -120,34 +134,16 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
   width: 100%;
   height: clamp(20px, 10vw, 130px);
+  text-align: center;
   position: fixed;
   color: var(--dgreen);
   border-radius: 0 0 clamp(20px, 2vw, 50px) clamp(20px, 2vw, 50px);
   transition: 0.1s;
   background-color: transparent;
   z-index: 1;
-}
-
-#title {
-  font-weight: bold;
-  font-size: clamp(35px, 5.5vw, 70px);
-  padding: 3px;
-  transition: 0.4s;
-}
-
-#subtitle {
-  font-size: clamp(15px, calc(5.4vw - 30px), 30px);
-  letter-spacing: clamp(0px, 0.1em, 30px);
-  line-height: clamp(2px, -5.5vw, 3px);
-  transition: 0.3s;
-  color: var(--dgreen);
-  display: none;
 }
 
 .clouds {
@@ -163,7 +159,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  position: relative; /* Ensure positioning context */
+  position: relative;
   transition: 0.3s;
 }
 
@@ -185,12 +181,31 @@ body {
   text-align: center;
 }
 
+#title {
+  padding-top: clamp(5px, 0.5vw, 50px);
+  font-weight: bold;
+  font-size: clamp(30px, 5.5vw, 70px);
+  margin-top: clamp(5px, 0.3vw, 15px);
+  margin-bottom: clamp(5px, 0.3vw, 15px);
+  transition: 0.4s;
+}
+
+#subtitle {
+  font-size: clamp(15px, calc(5.4vw - 30px), 30px);
+  letter-spacing: clamp(0px, 0.1em, 30px);
+  line-height: clamp(2px, -5.5vw, 3px);
+  transition: 0.3s;
+  color: var(--dgreen)
+}
+
+
 /*------------------------- BODY -------------------------*/
 
 @media only screen and (max-width: 800px) {
-  .main {
-    width: 90% !important;
-  }
+    .main {
+        width: 90% !important;
+        top: 60px !important;
+    }
 }
 
 .main {
@@ -337,35 +352,31 @@ button:hover .normal {
 /*------------------------- P2: EXPERIENCE -------------------------*/
 
 ul {
-  /* list-style-type: none; */
+  list-style-type: none;
   padding: 0px;
   margin: 0px;
-  list-style-image: url('HomePage/cloud.png');
 }
 
-/* li { */
-  /* list-style: none; */
-  /* background: url('HomePage/cloud.png') no-repeat left; */
-  /* background-size: clamp(15px, 1.5vw, 45px); */
-/* } */
+li {
+  list-style: none;
+  background: url('HomePage/cloud.png') no-repeat left;
+  background-size: clamp(15px, 2vw, 25px);
+}
 
-/* .bullet1 {
-  list-style-type: none;
-  list-style-image: url('HomePage/cloud.png');
+.bullet1 {
   background-position: 5px center;
-  padding-left: calc(clamp(20px, 1.6vw, 45px) + 5px);
-} */
+  padding-left: calc(clamp(25px, 1.5vw, 40px) + 5px);
+}
 
-/* 
 .bullet2 {
   background-position: 40px center;
-  padding-left: calc(clamp(20px, 1.6vw, 45px) + 40px);
+  padding-left: calc(clamp(25px, 1.5vw, 40px) + 40px);
 }
 
 .bullet3 {
   background-position: 75px center;
-  padding-left: calc(clamp(20px, 1.6vw, 45px) + 75px);
-} */
+  padding-left: calc(clamp(25px, 1.5vw, 40px) + 75px);
+}
 
 
 /*------------------------- P4: HOBBIES -------------------------*/
