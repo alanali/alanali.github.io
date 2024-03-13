@@ -134,10 +134,12 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
   height: clamp(20px, 10vw, 130px);
-  text-align: center;
   position: fixed;
   color: var(--dgreen);
   border-radius: 0 0 clamp(20px, 2vw, 50px) clamp(20px, 2vw, 50px);
@@ -182,11 +184,9 @@ body {
 }
 
 #title {
-  padding-top: clamp(5px, 0.5vw, 50px);
   font-weight: bold;
-  font-size: clamp(30px, 5.5vw, 70px);
-  margin-top: clamp(5px, 0.3vw, 15px);
-  margin-bottom: clamp(5px, 0.3vw, 15px);
+  font-size: clamp(35px, 5.5vw, 70px);
+  padding: 3px;
   transition: 0.4s;
 }
 
