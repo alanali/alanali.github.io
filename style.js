@@ -25,9 +25,9 @@ function shrink(id) {
   var size;
   if (id == "title") {
     if (3.5 * width / 100 <= 30) {
-      size = "30px";
+      size = "25px";
     } else if (3.5 * width / 100 >= 50) {
-      size = "40px";
+      size = "45px";
     } else {
       size = "3.5vw";
     }
