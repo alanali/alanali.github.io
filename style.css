@@ -298,6 +298,17 @@ p6 {
   text-align: center;
 }
 
+p7 {
+  font-size: clamp(16px, calc(5vw - 35px), 20px);
+  color: var(--yellow);
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
 .tabtext {
   padding-left: clamp(5px, 2vw, 30px);
 }
@@ -365,17 +376,17 @@ li {
 
 .bullet1 {
   background-position: 5px center;
-  padding-left: calc(clamp(25px, 1.5vw, 40px) + 5px);
+  padding-left: calc(clamp(25px, 3vw, 40px) + 5px);
 }
 
 .bullet2 {
   background-position: 40px center;
-  padding-left: calc(clamp(25px, 1.5vw, 40px) + 40px);
+  padding-left: calc(clamp(25px, 3vw, 40px) + 40px);
 }
 
 .bullet3 {
   background-position: 75px center;
-  padding-left: calc(clamp(25px, 1.5vw, 40px) + 75px);
+  padding-left: calc(clamp(25px, 3vw, 40px) + 75px);
 }
 
 
